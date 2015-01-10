@@ -21,7 +21,7 @@ body {
 }
 #content-block{
 	margin-left:auto;
-	margin-right:auto
+	margin-right:auto;
 }
 #about-info{
 	fill:#EF5350;
@@ -32,8 +32,8 @@ body {
 #media-info{
 
 	fill:#FFEE58;
-	/* stroke:white;
-	stroke-width:5; */
+	stroke:white;
+	stroke-width:5;
 	opacity:0.5
 
 }
