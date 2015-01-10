@@ -24,20 +24,20 @@ body {
 }
 #about-info{
 	fill:Red;
-	stroke:black;
+	stroke:white;
 	stroke-width:5;
 	opacity:0.5
 }
 #media-info{
 	fill:Yellow;
-	stroke:black;
+	stroke:white;
 	stroke-width:5;
 	opacity:0.5
 
 }
 #blog-info{
 	fill:Blue;
-	stroke:black;
+	stroke:white;
 	stroke-width:5;
 	opacity:0.5
 
