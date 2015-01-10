@@ -23,7 +23,7 @@ body {
 	fill:White;
 }
 
-circle#about:hover{
+circle.dot:hover{
 	opacity:0.5;
 }
 
