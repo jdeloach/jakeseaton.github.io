@@ -19,10 +19,14 @@ body {
 }
 
 }
-dot:hover{
-	color: White;
-}
+#content-block{
+	width: 400;
+	height:180;
 
+}
+/* dot:hover{
+	color: White;
+} */
 /*
 .dot{
 }
