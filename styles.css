@@ -24,6 +24,8 @@ body {
 	fill:White;
 }
 #bar{
+	margin-left:auto;
+	margin-right:auto;
 	color:White;
 }
 
