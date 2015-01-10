@@ -4,6 +4,9 @@
 	font-weight:normal;
 	src: local("20-db"), "20-db.otf";
 } */
+body {
+	background-color: #616161;
+}
 #JakeSeaton {
 	font-family: "Impact", Impact, monospace;
 	/* font-family: "20-db"; 
