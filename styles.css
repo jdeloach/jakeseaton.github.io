@@ -20,8 +20,27 @@ body {
 
 }
 #content-block{
-	width: 400;
-	height:180;
+
+
+}
+#about-info{
+	fill:Red;
+	stroke:black;
+	stroke-width:5;
+	opacity:0.5
+}
+#media-info{
+	fill:Red;
+	stroke:black;
+	stroke-width:5;
+	opacity:0.5
+
+}
+#blog-info{
+	fill:Red;
+	stroke:black;
+	stroke-width:5;
+	opacity:0.5
 
 }
 /* dot:hover{
