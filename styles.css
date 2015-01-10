@@ -19,7 +19,7 @@ body {
 }
 
 svg.dot:hover{
-	opacity:0.5
+	opacity:0.5;
 }
 
 #content-block{
