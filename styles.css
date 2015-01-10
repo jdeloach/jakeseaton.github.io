@@ -2,7 +2,7 @@
 	font-family: "20-db";
 	font-style:normal;
 	font-weight:normal;
-	src: "20-db/20-db.otf"
+	src: local("20-db"), "20-db.otf";
 }
 #JakeSeaton {
 	/*font-family: "Courier New", Courier, monospace;*/
