@@ -10,11 +10,29 @@ body {
 
 #JakeSeaton {
 	font-family: "Impact", Impact, monospace;
-	/* font-family: "20-db"; 
+	/* font-family: "20-db";
 	src: "20-db/20-db.otf";*/
 	margin-top:50px;
 	color: White;
 	text-shadow: 2px 2px 4px #000000;
 	font-size: 800%;
+}
 
 }
+.dot:hover{
+	text-shadow: 2px 2px 4px #000000;
+}
+
+/*
+.dot{
+}
+
+#about {
+
+}
+#media {
+
+}
+#blog {
+
+} */
