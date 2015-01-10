@@ -23,20 +23,20 @@ body {
 	text-align:center;
 }
 #about-info{
-	fill:Red;
+	fill:#EF5350;
 	stroke:white;
 	stroke-width:5;
 	opacity:0.5
 }
 #media-info{
-	fill:Yellow;
-	stroke:white;
-	stroke-width:5;
+	fill:#FFEE58;
+	/* stroke:white;
+	stroke-width:5; */
 	opacity:0.5
 
 }
 #blog-info{
-	fill:Blue;
+	fill:#42A5F5;
 	stroke:white;
 	stroke-width:5;
 	opacity:0.5
