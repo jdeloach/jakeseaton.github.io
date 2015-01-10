@@ -13,8 +13,8 @@ body {
 	/* font-family: "20-db"; 
 	src: "20-db/20-db.otf";*/
 	margin-top:50px;
-	color: Black;
+	color: White;
 	text-shadow: 2px 2px 4px #000000;
-	size: 800%;
+	font-size: 800%;
 
 }
