@@ -18,7 +18,10 @@ body {
 	font-size: 800%;
 }
 
+svg.dot:hover{
+	opacity:0.5
 }
+
 #content-block{
 }
 #about-info{
