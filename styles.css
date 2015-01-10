@@ -17,8 +17,13 @@ body {
 	text-shadow: 2px 2px 4px #000000;
 	font-size: 800%;
 }
+#dot-text{
+	text-align:center;
+	color:White;
+	fill:White;
+}
 
-svg.dot:hover{
+circle#about:hover{
 	opacity:0.5;
 }
 
