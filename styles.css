@@ -35,11 +35,20 @@ circle.dot:hover{
 
 #content-block{
 }
+.block-text{
+	fill:White;
+	text-align:center;
+	font-family: "Times", Times, serif;
+	font-size: 100%
+}
 #about-info{
 	fill:#EF5350;
 	/* stroke:white;
 	stroke-width:5; */
 	opacity:0.5
+}
+#about-text{
+	color:White;
 }
 #media-info{
 
@@ -56,6 +65,7 @@ circle.dot:hover{
 	opacity:0.5
 
 }
+
 /* dot:hover{
 	color: White;
 } */
