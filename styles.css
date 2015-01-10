@@ -20,21 +20,15 @@ body {
 
 }
 #content-block{
-	margin-left: auto;
-	margin-right: auto;
 
 }
 #about-info{
-	margin-left: auto;
-	margin-right: auto;
 	fill:Red;
 	stroke:black;
 	stroke-width:5;
 	opacity:0.5
 }
 #media-info{
-	margin-left: auto;
-	margin-right: auto;
 	fill:Yellow;
 	stroke:black;
 	stroke-width:5;
@@ -42,8 +36,6 @@ body {
 
 }
 #blog-info{
-	margin-left: auto;
-	margin-right: auto;
 	fill:Blue;
 	stroke:black;
 	stroke-width:5;
