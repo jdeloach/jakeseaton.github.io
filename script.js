@@ -2,7 +2,7 @@
 // var dots = document.getElementById('dot');
 
 // url's
-var fbURl = "https://www.facebook.com/jake.seaton.92";
+var fbURL = "https://www.facebook.com/jake.seaton.92";
 var twitterURL = "https://twitter.com/JakeSeaton13";
 var linkedinURL = "https://www.linkedin.com/pub/jake-seaton/a7/654/a80";
 
