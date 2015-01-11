@@ -8,6 +8,8 @@ body {
 	background-color: #616161;
 }
 
+
+
 #JakeSeaton {
 	font-family: "Impact", Impact, monospace;
 	/* font-family: "20-db";
@@ -29,11 +31,14 @@ body {
 	color:White;
 }
 
-circle.dot:hover{
+/* circle.dot:hover{
 	opacity:0.5;
-}
+} */
 
 #content-block{
+}
+.about-text{
+	fill:White;
 }
 .block-text{
 	fill:White;
@@ -45,27 +50,30 @@ circle.dot:hover{
 	fill:#EF5350;
 	/* stroke:white;
 	stroke-width:5; */
-	opacity:0.5
+	opacity: 1;
 }
 #about-text{
 	color:White;
+	/* list-style-type:circle; */
 }
 #media-info{
 
 	fill:#FFEE58;
 	/* stroke:white;
 	stroke-width:5; */
-	opacity:0.5
+	opacity:1;
 
 }
 #blog-info{
 	fill:#42A5F5;
 	/* stroke:white;
 	stroke-width:5; */
-	opacity:0.5
+	opacity:1;
 
 }
-
+#blog-text{
+	fill:White;
+}
 /* dot:hover{
 	color: White;
 } */
