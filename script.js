@@ -3,16 +3,12 @@ var currently_open = "";
 var opened = false;
 
 $(document).ready(function(){
-    
     // click on a circle  
     $(".box").click(function(){
 
-      // console.log($(this).attr('class'));
-      // console.log($(this).id);
+
       if ($(this).hasClass("box")){
         if (opened == false) {
-          console.log("before expansion");
-          console.log($(this).attr('style'));
           // it's no longer a box
           $(this).removeClass("box");
           $(this).addClass("open");
@@ -38,8 +34,6 @@ $(document).ready(function(){
           
           currently_open = this.id;
 
-          console.log("after expansion:");
-          console.log($(this).attr('style'));
 
         }
       
@@ -92,8 +86,6 @@ function restore()
 
   var current = "#" + currently_open;  
 
-  console.log("before contraction");
-  console.log($(current).attr('style'));
 // reduce the height
   $(current).animate({
     height:"0px"
@@ -122,9 +114,6 @@ function restore()
 
           // display boxes
           $(".box").css({"display":"inline-block"});
-          
-          console.log("after contraction");
-          console.log($(current).attr('style'));
         
     });
 }
@@ -146,12 +135,16 @@ function reveal(box_id){
 function expand(element)
 {
     $(element).removeAttr("style");
+    // $(element).css({"width":"100%"});
     $(element).animate({
       height:"+=500px"
     });
-    // $(element).animate({
-    //   width:"100%"
-
-    // });
     $(element).fadeTo("slow",1);
+}
+
+function fade(element){
+  $(element).fadeTo("slow",.5);
+}
+function sharpen(element){
+  $(element).fadeTo("slow",1);
 }
