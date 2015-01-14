@@ -1,47 +1,68 @@
 // Javascript for jakeseaton.net
-// var dots = document.getElementById('dot');
-
-// url's
-var fbURL = "https://www.facebook.com/jake.seaton.92";
-var twitterURL = "https://twitter.com/JakeSeaton13";
-var linkedinURL = "https://www.linkedin.com/pub/jake-seaton/a7/654/a80";
-
-// dots
-
-var aboutDot = document.getElementById('about-dot');
-var mediaDot = document.getElementById('media-dot');
-var blogDot = document.getElementById('blog-dot');
-
-// blocks
-
-var aboutBlock = document.getElementById('about-info');
-var mediaBlock = document.getElementById('media-info');
-var blogBlock = document.getElementById('blog-info');
-
-// content
-var aboutText = document.getElementById('about-text');
-var blogText = document.getElementById('blog-text');
-var Facebook = document.getElementById('facebook');
-var Twitter = document.getElementById('twitter');
-var Linkedin = document.getElementById('linkedin');
-
+var currently_open = "";
+var opened = false;
 
 $(document).ready(function(){
-  // alert(aboutDot);
-  // hide the rectangles
-  $(".content-text").hide();
-  $(".about-text").hide();
-  $(".media-text").hide();
-  $(".block").hide();
-  // $(".block").attr("hidden", "true");
+    
+    // click on a circle  
+    $(".box").click(function(){
+
+      // console.log($(this).attr('class'));
+      // console.log($(this).id);
+      if ($(this).hasClass("box")){
+        if (opened == false) {
+          console.log("before expansion");
+          console.log($(this).attr('style'));
+          // it's no longer a box
+          $(this).removeClass("box");
+          $(this).addClass("open");
+
+          // remove all boxes
+          $(".box").css("display", "none");
+        
+          // add a partition
+          $("#partition").removeClass("invisible");
+          //$("#partition").html("<br><br><br><br>"); 
+
+          // expand to the bottom
+          expand(this);
+
+          // reveal the content
+          reveal(this.id);
+
+          // set opened
+          opened = true;
+
+          // it's open
+          // $(this).addClass("open");
+          
+          currently_open = this.id;
+
+          console.log("after expansion:");
+          console.log($(this).attr('style'));
+
+        }
+      
+      }
+      
+    });
+
+
+  // contract when up-circle clicked
+  $(".up-circle").click(function(){
+    if (opened == true){
+      restore();
+      opened = false;
+      currently_open = "";
+      // opened = false;
+    }
+    
+  });
+
   $("circle").hover(function(){
     if ($(this).css("opacity")==1){
       $(this).fadeTo("slow",.5);
-      /* ,function(){
-        // bring the full block
-        displayBlock(this.id);*/
-      };
-
+      }
     }
   );
   $("circle").mouseleave(function(){
@@ -49,106 +70,88 @@ $(document).ready(function(){
       $(this).fadeTo("slow",1);
     }
   });
-
-  $("circle").click(function(){
-    $(this).fadeTo("fast", 0, function(){
-      displayBlock(this.id);
-    });
-  });
-  $("rect").click(function(){
-    if ($(this).css("opacity") == .5)
-    {
-      restore(this.id);
-      $(this).fadeTo("slow",0);
-    }
-  });
-
-  $(".media-text").click(function(){
-    // it it has been revealed
-    if ($(this).css("opacity") == 1)
-    {
-      // go to there
-      redirect(this.id);
-    }
-    // otherwise do nothing
-  });
+  
 
 });
 
-// fade the dot
-// sharpen the block
-// display the text/image
-
-function displayBlock(dot){
-  switch(dot) {
-  case "about-dot":
-    $("#about-info").fadeTo("slow",1);
-    $("#about-info").fadeTo("slow",.5);
-    $(".about-text").delay(600).fadeTo("slow",1);
-    // $(".about-text").fadeTo("slow",1);
-    break;
-  case "media-dot":
-    $("#media-info").fadeTo("slow",1);
-    $("#media-info").fadeTo("slow",.5);
-    $(".media-text").delay(600).fadeTo("slow",1);
-    // $(".media-text").fadeTo("slow", 1);
-    break;
-  case "blog-dot":
-    $("#blog-info").fadeTo("slow",1);
-    $("#blog-info").fadeTo("slow",.5);
-    $("#blog-text").delay(600).fadeTo("slow",1);
-    // $("#blog-text").fadeTo("slow",1);
-    break;
-  }
-}
-function fadeBlock(dot){
-  switch(dot) {
-    case "about-dot":
-      $("#about-info").fadeTo("slow",.5);
-      $(".about-text").fadeTo("slow",1);
-      break;
-    case "media-dot":
-      $("#media-info").fadeTo("slow",.5);
-      $(".media-text").fadeTo("slow", 1);
-      break;
-    case "blog-dot":
-      $("#blog-info").fadeTo("slow",.5);
-      $("#blog-text").fadeTo("slow",1);
-      break;
-  }
-}
-
-
-function restore(block)
+function restore()
 {
-  switch(block){
-    case "about-info":
-      $(".about-text").fadeTo("slow",0);
-      $("#about-dot").fadeTo("fast",1);
-      break;
-    case "media-info":
-      $(".media-text").fadeTo("slow",0);
-      $("#media-dot").fadeTo("fast",1);
-      break;
-    case "blog-info":
-      $("#blog-text").fadeTo("slow",0);
-      $("#blog-dot").fadeTo("fast",1);
-      break;
 
+
+  switch(currently_open){
+    case "red":
+      $("#about").addClass("invisible");
+      break;
+    case "yellow":
+      $("#media").addClass("invisible");
+      break;
+    case "blue":
+      $("#blog").addClass("invisible");
+      break;
+  }
+
+  var current = "#" + currently_open;  
+
+  console.log("before contraction");
+  console.log($(current).attr('style'));
+// reduce the height
+  $(current).animate({
+    height:"0px"
+   }, 200,function(){
+          // make it invisible for a sec
+          $(current).addClass("invisible");
+
+          $(current).css({
+            'height':"80px",
+            'width' :"80px",
+            "border-radius":"40px",
+            "opacity":".5"
+
+          });
+
+          // driver roll up the partition please
+          $("#partition").addClass("invisible"); 
+
+          // it's no longer open
+          $(current).removeClass("open");
+
+          // identify it as a box again
+          $(current).addClass("box");
+
+          $(".box").removeClass("invisible");
+
+          // display boxes
+          $(".box").css({"display":"inline-block"});
+          
+          console.log("after contraction");
+          console.log($(current).attr('style'));
+        
+    });
+}
+
+function reveal(box_id){
+  switch(box_id){
+    case "red":
+      $("#about").removeClass("invisible");
+      break;
+    case "yellow":
+      $("#media").removeClass("invisible");
+      break;
+    case "blue":
+      $("#blog").removeClass("invisible");
+      break;
   }
 }
 
-function redirect(destination)
+function expand(element)
 {
-  switch(destination){
-    case "facebook":
-      $(location).attr("href", fbURL);
-      break;
-    case "twitter" :
-      $(location).attr("href", twitterURL);
-      break;
-    case "linkedin":
-      $(location).attr("href", linkedinURL);
-      break;
-  }
+    $(element).removeAttr("style");
+    $(element).animate({
+      height:"+=500px"
+    });
+    // $(element).animate({
+    //   width:"100%"
+
+    // });
+    $(element).fadeTo("slow",1);
 }

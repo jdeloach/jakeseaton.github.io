@@ -1,19 +1,42 @@
-/* @font-face{
-	font-family: "20-db";
-	font-style:normal;
-	font-weight:normal;
-	src: local("20-db"), "20-db.otf";
-} */
 body {
 	background-color: #616161;
 }
+#top-text
+{
+	color:White;
+}
 
+.box {
+	width:80px;
+	height:80px;
+	border-radius:40px;
+	margin-left:auto;
+	margin-right:auto;
+	display:inline-block;
+	opacity:.5;
+}
+.box:hover{
+	cursor:pointer;
+}
+#circles {
+	margin-right:auto;
+	margin-left:auto;
+}
+#red {
+	background:#EF5350;
 
+}
+#yellow {
+	background:#FFEE58;
+}
+#blue {
+	background:#42A5F5;
+}
+
+/* new fixed section */
 
 #JakeSeaton {
 	font-family: "Impact", Impact, monospace;
-	/* font-family: "20-db";
-	src: "20-db/20-db.otf";*/
 	margin-top:50px;
 	color: White;
 	text-shadow: 2px 2px 4px #000000;
@@ -31,10 +54,6 @@ body {
 	color:White;
 }
 
-/* circle.dot:hover{
-	opacity:0.5;
-} */
-
 #content-block{
 }
 .about-text{
@@ -48,8 +67,6 @@ body {
 }
 #about-info{
 	fill:#EF5350;
-	/* stroke:white;
-	stroke-width:5; */
 	opacity: 1;
 }
 #about-text{
@@ -59,34 +76,14 @@ body {
 #media-info{
 
 	fill:#FFEE58;
-	/* stroke:white;
-	stroke-width:5; */
 	opacity:1;
 
 }
 #blog-info{
 	fill:#42A5F5;
-	/* stroke:white;
-	stroke-width:5; */
 	opacity:1;
 
 }
 #blog-text{
 	fill:White;
 }
-/* dot:hover{
-	color: White;
-} */
-/*
-.dot{
-}
-
-#about {
-
-}
-#media {
-
-}
-#blog {
-
-} */

@@ -12,6 +12,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <link href="css/sass.css" rel="stylesheet"
   </head>
   <body>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -19,63 +20,76 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="script.js"></script>
-    <p id = "JakeSeaton" class = "text-center">JAKE SEATON</p>
-    <!--<div class = "text-center">
-      <a href="https://www.facebook.com/jake.seaton.92">Facebook</a>
-      <a href="https://twitter.com/JakeSeaton13">Twitter</a>
-      <a href="https://www.linkedin.com/pub/jake-seaton/a7/654/a80">Linkedin</a>
+    <div id = "title">
+    <!-- fix this --> 
+      <div width = "50%" id = "JakeSeaton" class = "text-center">JAKE SEATON</div>
     </div>
-     <a href="https://github.com/jakeseaton">Github</a> -->
-     <div id = "container fluid" class = "text-center">
-       <text id = "dot-text">about</text>
-       <text id = "bar">|</text>
-       <text id = "dot-text">media</text>
-       <text id = "bar">|</text>
-       <text id = "dot-text">blog</text>
+    <div id = "top-text" class = "text-center">
+       about | media | blog
     </div>
-    <div id = "container-fluid" class = "text-center">
-      <svg height="100" width="100">
-        <circle id = "about-dot" class = "dot" cx="50" cy="50" r="40" fill="#EF5350" />
-      </svg>
-      <svg id = "dot" height="100" width="100">
-        <circle id = "media-dot" class = "dot" cx="50" cy="50" r="40" fill="#FFEE58" />
-      </svg>
-      <svg id = "dot" height="100" width="100">
-        <circle id = "blog-dot" class = "dot" cx="50" cy="50" r="40" fill="#42A5F5" />
-      </svg>
+    <div id = "partition" class = "invisible">
+      <br>
+      <br>
+      <br>
+      <br>
     </div>
-    <div id = "container-fluid" class = "text-center">
-      <svg id = "content-block" width="400" height="300">
-        <rect id = "about-info" class = "block" rx="20" ry="20" width="400" height="300"/>
-        <text class = "about-text" x = "40" y = "50">sophomore at harvard college</text>
-        <text class = "about-text" x = "90" y = "150">from manhattan, kansas</text>
-        <text class = "about-text" x = "140" y = "250">computer science, linguistcs</text>
-      </svg>
-      <svg id = "content-block" width="400" height="300">
-        <rect id = "media-info" class="block"  rx="20" ry="20" width="400" height="300"/>
-        <image id = "facebook" class ="media-text" xlink:href="img/facebook.png" x = "180" y = "30" width="42px" height="42px"/>
-        <image id = "twitter" class ="media-text" xlink:href="img/twitter.png" x ="180" y = "130" width="42px" height="42px"/>
-        <image id = "linkedin" class ="media-text" xlink:href="img/linkedin.png" x = "180" y = "230" width="42px" height="42px"/>
-      </svg>
-      <svg id = "content-block" width="400" height="300">
-        <rect id = "blog-info" class="block" rx="20" ry="20" width="400" height="300" />
-        <text id = "blog-text" class = "content-text" x = "155" y = "150">coming soon</text>
-      </svg>
-    </div>
-    <!-- <p id = "about-text" hidden = "true" >Jake is currently a sophomore at Harvard College, pursuing a dual major in computer science and linguistics. He is a member of the Harvard Advocate's Executive and Art Boards.</p>
-    <ul id = "about-text" hidden = "true">
-      <li>Jake is a sophomore at Harvard College, pursuing a dual major in computer science and linguistcs.</li>
-      <li>He is a member of the Harvard Advocate's Executive and Art Boards</li>
-    </ul>
-    <p id = "blog-text" hidden = "true">coming soon...</p>
-    <a id = "facebook" href="https://www.facebook.com/jake.seaton.92" hidden="true">
-      <img src="img/facebook.png" alt="facebook" width="42" height="42" border="0"/>
-    </a>
-    <a id = "twitter" hidden="true" href="https://twitter.com/JakeSeaton13">
-      <img src="img/twitter.png" alt="twitter" width="42" height="42" border="0"/>
-    </a>
-    <a id = "linkedin" href="https://www.linkedin.com/pub/jake-seaton/a7/654/a80" hidden="true">
-      <img src="img/linkedin.png" alt="linkedin" width="42" height="42" border="0"/>
-    </a> -->
+    <div id = "circles" class = "text-center">
+      <div id = "red" class = "box">
+        <div id = "about" class = "content invisible">
+          <div class = "up-circle">
+          </div>
+            <!-- <img id ="arrow" src="img/circle_arrow.png" alt="arriw" width="42" height="42" border="0"/> --> 
+          <br>
+          <br>
+          <div id = "about-text">
+            sophomore at harvard college
+            <br> 
+            <br>
+            <br>
+            from manhattan, kansas
+            <br>
+            <br>
+            <br>
+            computer science, linguistics
+          </div>
+        </div>
+      </div>
+      <div id = "yellow" class = "box">
+        <div id = "media" class = "content invisible">
+          <div class = "up-circle">
+          </div>
+          <br>
+          <br>
+          <a id = "facebook" href="https://www.facebook.com/jake.seaton.92">
+            <img src="img/facebook.png" alt="facebook" width="42" height="42" border="0"/>
+          </a>
+          <br>
+          <br>
+          <br>
+          <a id = "twitter" href="https://twitter.com/JakeSeaton13">
+            <img src="img/twitter.png" alt="twitter" width="42" height="42" border="0"/>
+          </a>
+          <br>
+          <br>
+          <br>
+          <a id = "linkedin" href="https://www.linkedin.com/pub/jake-seaton/a7/654/a80">
+            <img src="img/linkedin.png" alt="linkedin" width="42" height="42" border="0"/>
+          </a> 
+        </div>
+      </div>
+      
+      <div id = "blue" class = "box">
+        <div id = "blog" class = "content invisible">
+          <div class = "up-circle">
+          </div>
+          <br>
+          <br>
+          <div id = "blog-text">
+            coming soon
+          </div>
+        </div>
+      </div>
+    
+    </div>     
   </body>
 </html>
