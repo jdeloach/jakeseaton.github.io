@@ -1,173 +1,152 @@
 // Javascript for jakeseaton.net
-var currently_open = "";
 var opened = false;
+var currently_open = "";
+var current = "#"+currently_open;
 
 $(document).ready(function(){
-    $(".up-circle").hover(
-      function(){
-          console.log(opened);
-          $(".up-circle").fadeTo("fast","1");
-      },
-      function(){
-        console.log(opened);
-        $(".up-circle").fadeTo("fast",".5");
-      }
-    );
-
-    // hover over a circle
+    // circle:hover
     $(".box").hover(
       function(){
         if (opened==false){
-          console.log("derp");
-          $(this).fadeTo("fast","1");
+          sharpen(this);
+          //$(this).fadeTo("fast","1");
         }
       },
       function(){
-        if(opened == false){
-          console.log("derp");
-          $(this).fadeTo("fast",".5");}
+        if(opened==false){fade(this);}
       }
     );
 
-    // click on a circle  
+    // circle :click 
     $(".box").click(function(){
 
-
-      if ($(this).hasClass("box")){
+      if ($(this).hasClass("box")){ 
         if (opened == false) {
-          // it's no longer a box
-          $(this).removeClass("box");
-          $(this).addClass("open");
-
-          // remove all boxes
-          $(".box").css("display", "none");
-        
-          // add a partition
-          $("#partition").removeClass("invisible");
-          //$("#partition").html("<br><br><br><br>"); 
-
-          // expand to the bottom
           expand(this);
-
-          //remove the extra space
-          $("#mobile space").addClass("invisible");
-
-          // reveal the content
-          reveal(this.id);
-
-          // set opened
-          opened = true;
-
-          // it's open
-          // $(this).addClass("open");
-          currently_open = this.id;
+        }
+        else{
+          if (this.id != currently_open){
+            restore(); 
+          }   
         }
       }
     });
 
+    // up-circle:hover
+    $(".up-circle").hover(
+      function(){
+          sharpen(".up-circle");
+      },
+      function(){
+        fade(".up-circle");
+      }
+    );
 
-  // contract when up-circle clicked
+
+  // up-circle:click--restore
   $(".up-circle").click(function(){
     if (opened == true){
       restore();
-
-      // add back the extra space
-      $("#mobile space").removeClass("invisible");
-
-      // close
-      opened = false;
-      currently_open = "";
     }
     
-  });  
+  });
 
 });
+/* FUNCTIONS */ 
 
-function restore()
-{
+// functions for displaying content
+
+function lower_partition(){
+      $("#partition").animate({
+        height:"+=500px"
+      }, 200);
+}
+
+function expand(color)
+{   
+    // fade this circle
+    fade_out(color);
+
+    // lower the partition
+    lower_partition();
+    
+    $("#partition").removeClass("invisible");
+
+    switch(color.id){
+      case "red":
+        $("#abt").removeClass("invisible-abt");
+        break;
+      case "yellow":
+        $("#media").removeClass("invisible-media");
+        break;
+      case "blue":
+        $("#blog").removeClass("invisible-blog");
+        break;
+    }
+    //remove the extra space
+    $("#mobile space").addClass("invisible");
+
+    // set opened
+    opened = true;
+          
+    currently_open = color.id;
+}
+
+// functions for restoring
+function raise_partition(){
+  // console.log(currently_open);
+  $("#partition").addClass(currently_open);
+
+  $("#partition").animate({
+    "height":"-=500px"
+  },200, function(){
+    
+    // get rid of the temporary color
+    $("#partition").removeClass(currently_open);
+
+    // this definitely shouldn't be here...but it is.
+    currently_open = "";
+
+  });
+  
+}
+
+function restore(){
+
+  // bring back the boxes
+  fade(".box");
+  
+  // driver roll up the partition please
+  raise_partition();
+ 
   switch(currently_open){
     case "red":
-      $("#about").addClass("invisible");
+      $("#abt").addClass("invisible-abt");
       break;
     case "yellow":
-      $("#media").addClass("invisible");
+      $("#media").addClass("invisible-media");
       break;
     case "blue":
-      $("#blog").addClass("invisible");
+      $("#blog").addClass("invisible-blog");
       break;
   }
+  // add back the extra space
+  $("#mobile space").removeClass("invisible");
 
-  // configure
-  var current = "#" + currently_open;  
-
-  // reduce the height
-  $(current).animate({
-    height:"0px"
-   }, 200,function(){
-          // make it invisible for a sec
-          $(current).addClass("invisible");
-
-          $(current).css({
-            'height':"80px",
-            'width' :"80px",
-            "border-radius":"40px"//,
-            //"opacity":".5"
-
-          });
-
-          // driver roll up the partition please
-          $("#partition").addClass("invisible"); 
-
-          // it's no longer open
-          $(current).removeClass("open");
-
-          // identify it as a box again
-          $(current).addClass("box");
-
-          // restore hover property
-          // $(current).hover(function(){
-          //   $(this).fadeTo("fast",".5");
-          //   },
-          //   function(){
-          //     $(this).fadeTo("fast","1");
-          //   }
-          // );
-
-          $(".box").removeClass("invisible");
-
-          // display boxes
-          $(".box").css({"display":"inline-block"});
-        
-    });
+  // close
+  opened = false;
 }
 
-function reveal(box_id){
-  switch(box_id){
-    case "red":
-      $("#about").removeClass("invisible");
-      break;
-    case "yellow":
-      $("#media").removeClass("invisible");
-      break;
-    case "blue":
-      $("#blog").removeClass("invisible");
-      break;
-  }
-}
-
-function expand(element)
-{
-    $(element).removeAttr("style");
-    // $(element).css({"width":"100%"});
-    $(element).animate({
-      height:"+=500px"
-    });
-    $(element).fadeTo("slow",1);
-}
-
+// other
 function fade(element){
-  $(element).fadeTo("slow",.5);
+  $(element).fadeTo("fast",.5);
 }
 function sharpen(element){
-  $(element).fadeTo("slow",1);
+  $(element).fadeTo("fast",1);
+}
+function fade_out(element){
+  $(element).fadeTo("fast",0)
+}
+function debug(){
+  console.log("got to here");
 }

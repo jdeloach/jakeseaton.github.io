@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,8 +12,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <link href="css/sass.css" rel="stylesheet"
+    <link href="css/sass.css" rel="stylesheet">
   </head>
   <body>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -21,23 +21,23 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="script.js"></script>
     <div id = "title">
-    <!-- fix this --> 
-      <div id = "JakeSeaton" class = "text-center">JS</div>
+      <div id = "title-text" class = "text-center">JS</div>
     </div>
     <div id = "top-text" class = "text-center">
        about  |  media  |  other
     </div>
     <br>
-    <div id = "partition" class = "invisible">
-      <br>
-      <br>
-      <br>
-      <br>
-    </div>
     <div id = "circles" class = "text-center">
-      <div id = "red" class = "box">
-        <div id = "about" class = "content invisible">
-          <div class = "up-circle">
+      <div id = "red" class = "box red">
+      </div>
+      <div id = "yellow" class = "box yellow">
+      </div>
+      <div id = "blue" class = "box blue">
+      </div>
+    </div> 
+    <div id = "partition" class = "text-center invisible">
+      <div id = "abt" class = "invisible-abt">
+          <div class = "up-circle" class = "invisible">
           </div>
             <!-- <img id ="arrow" src="img/circle_arrow.png" alt="arriw" width="42" height="42" border="0"/> --> 
           <br>
@@ -57,36 +57,29 @@
             <br>
             arts
           </div>
-        </div>
       </div>
-      <div id = "yellow" class = "box">
-        <div id = "media" class = "content invisible">
-          <div class = "up-circle">
-          </div>
-          <br>
-          <br>
-          <a id = "facebook" href="https://www.facebook.com/jake.seaton.92">
-            <img src="img/facebook.png" alt="facebook" width="42" height="42" border="0"/>
-          </a>
-          <br>
-          <br>
-          <br>
-          <a id = "twitter" href="https://twitter.com/JakeSeaton13">
-            <img src="img/twitter.png" alt="twitter" width="42" height="42" border="0"/>
-          </a>
-          <br>
-          <br>
-          <br>
-          <a id = "linkedin" href="https://www.linkedin.com/pub/jake-seaton/a7/654/a80">
-            <img src="img/linkedin.png" alt="linkedin" width="42" height="42" border="0"/>
-          </a> 
-        </div>
+      <div id = "media" class = "invisible-media"> 
+        <div class = "up-circle"></div>
+        <br>
+        <br>
+        <a id = "facebook" href="https://www.facebook.com/jake.seaton.92">
+          <img src="img/facebook.png" alt="facebook" width="42" height="42" border="0"/>
+        </a>
+        <br>
+        <br>
+        <br>
+        <a id = "twitter" href="https://twitter.com/JakeSeaton13">
+          <img src="img/twitter.png" alt="twitter" width="42" height="42" border="0"/>
+        </a>
+        <br>
+        <br>
+        <br>
+        <a id = "linkedin" href="https://www.linkedin.com/pub/jake-seaton/a7/654/a80">
+          <img src="img/linkedin.png" alt="linkedin" width="42" height="42" border="0"/>
+        </a> 
       </div>
-      
-      <div id = "blue" class = "box">
-        <div id = "blog" class = "content invisible">
-          <div class = "up-circle">
-          </div>
+      <div id = "blog" class = "invisible-blog">
+        <div class = "up-circle"></div>
           <br>
           <br>
           <a id = "github" href="https://www.github.com/jakeseaton">
@@ -106,11 +99,8 @@
           </a> 
           <br>
           <br>
-        </div>
       </div>
-    
     </div> 
-    <div id = "mobile-space">
-    </div>    
+    <div id = "mobile-space"></div>    
   </body>
 </html>

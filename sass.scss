@@ -1,82 +1,137 @@
 
+// Colors
+$white:White;
 $grey: #616161;
-$bg:$grey;
 $red:#EF5350;
 $yellow:#FFEE58;
 $blue:#42A5F5;
 
+// Variables
+$bg:$white;
+$content-text:$white;
+$circle-radius:80px;
+$padding:10px;
+$full-screen:100%;
+$name-size:800%;
+$shadow:2px 2px 4px #000000;
+
+// Meta
 body{
-	background-color:White;
-}
-#JakeSeaton{
-	// make this mobile responsive
-	color:$bg;
-	font-size:800%;
-}
-#top-text{
-	color:$bg;
-	text-shadow: 2px 2px 4px #000000;
-}
-
-.content{
-	display:normal;
-}
-
-#about{
-	background-color:$red;
-
-}
-#media{
-	background-color:$yellow;
-}
-#blog{
-	background-color:$blue;
+	background-color:$bg;
 }
 html{
 	overflow:hidden;
 }
 
-#about-text{
+#title-text{
+	// make this mobile responsive
+	font-family:"Impact",Impact, monospace;
+	margin-top:50px;
+	text-shadow: $shadow;
+	font-size:$name-size;
+	color:$grey;
+}
+#top-text{
+	color:$grey;
+	text-shadow:$shadow;
+}
 
-	color:White;
-}
-#blog-text{
-	color:White;
-}
-#test{
-	background-color:Red;
-}
+// use to make things feel like they're in middle school again
 .invisible {
 	display:none;
 }
-#arrow:hover{
-	cursor:pointer;
+.invisible-abt{
+	display:none;
 }
+.invisible-media{
+	display:none;
+}
+.invisible-blog{
+	display:none;
+}
+
+// the div containing the circles
+#circles{
+	margin-left:auto;
+	margin-right:auto;
+}
+// Circles...they started as boxes just live with it
+.box{
+	width:$circle-radius;
+	height:$circle-radius;
+	border-radius:40px;
+	cursor:pointer;
+	margin-left:$padding;
+	margin-right:$padding;
+	display:inline-block;
+	opacity:.5;
+}
+
+.red{
+	background-color:$red;
+}
+.yellow{
+	background-color:$yellow;
+}
+.blue{
+	background-color:$blue;
+}
+
+// probably unnecessary
+/* .content{
+	display:normal;
+} */
+
+// Initial dimensions of the partition
+.partition{
+	width:$full-screen;
+	height: 0px;
+}
+
+// The circle to return to the original screen
 .up-circle{
 	background-color:White;
-	width:80px;
-	height:80px;
+	width:$circle-radius;
+	height:$circle-radius;
 	border-radius:40px;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:10px;
+	margin-top:$padding;
 	display:inline-block;
 	opacity:.5;
 	cursor:pointer;
 }
-.open{
-	width:100%;
-	height:0px;
-	opacity:1;
-}
-#mobile-space{
-	width: 100%;
-	height:100px;
+// Specify the background colors for each of the sections
+#abt{
+	width:$full-screen;
+	height:$full-screen;
+	// isplay:inline-block;
+	background-color:$red;
 }
 
-.box{
-	margin-left:10px;
-	margin-right:10px;
-	// change this to make it opaque
-	opacity:.5;
+#media{
+	width:$full-screen;
+	height:$full-screen;
+	// display:inline-block;
+	background-color:$yellow;
+}
+#blog{
+	width:$full-screen;
+	height:$full-screen;
+	// display:inline-block;
+	background-color:$blue;
+}
+
+#about-text, #blog-text, #media-text{
+	color:$content-text;
+}
+
+/* .open{
+	width:$full-screen;
+	height:0px;
+	opacity:1;
+} */ 
+#mobile-space{
+	width: $full-screen;
+	height:100px;
 }

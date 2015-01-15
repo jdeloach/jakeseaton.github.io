@@ -1995,6 +1995,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/img\/advoseal.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 56060,
+		"inputAbbreviatedPath": "\/img\/advoseal.png",
+		"outputAbbreviatedPath": "\/img\/advoseal.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/circle.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2028,6 +2039,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/github.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14224,
+		"inputAbbreviatedPath": "\/img\/github.png",
+		"outputAbbreviatedPath": "\/img\/github.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/glass_arrow.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2057,6 +2079,17 @@
 		"initialSize": 2248,
 		"inputAbbreviatedPath": "\/img\/linkedin.png",
 		"outputAbbreviatedPath": "\/img\/linkedin.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/mercury.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2329,
+		"inputAbbreviatedPath": "\/img\/mercury.png",
+		"outputAbbreviatedPath": "\/img\/mercury.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2162,15 +2195,6 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
-		},
-	"\/styles.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/styles.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		}
 	},
 "hooks": [
