@@ -1,9 +1,9 @@
 body {
   background-color: White; }
 
-html {
-  overflow: hidden; }
-
+/* html{
+	overflow:hidden;
+}*/
 #title-text {
   font-family: "Impact",Impact, monospace;
   margin-top: 50px;
