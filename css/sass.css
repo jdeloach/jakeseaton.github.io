@@ -39,7 +39,7 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   display: inline-block;
-  opacity: .5; }
+  opacity: 1; }
 
 .red {
   background-color: #EF5350; }

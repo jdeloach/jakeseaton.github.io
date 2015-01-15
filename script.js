@@ -8,12 +8,12 @@ $(document).ready(function(){
     $(".box").hover(
       function(){
         if (opened==false){
-          sharpen(this);
+          fade(this);
           //$(this).fadeTo("fast","1");
         }
       },
       function(){
-        if(opened==false){fade(this);}
+        if(opened==false){sharpen(this);}
       }
     );
 
@@ -25,9 +25,7 @@ $(document).ready(function(){
           expand(this);
         }
         else{
-          if (this.id != currently_open){
-            restore(); 
-          }   
+            restore();   
         }
       }
     });
@@ -65,7 +63,7 @@ function lower_partition(){
 function expand(color)
 {   
     // fade this circle
-    fade_out(color);
+    fade(color);
 
     // lower the partition
     lower_partition();
@@ -114,7 +112,7 @@ function raise_partition(){
 function restore(){
 
   // bring back the boxes
-  fade(".box");
+  sharpen(".box");
   
   // driver roll up the partition please
   raise_partition();
