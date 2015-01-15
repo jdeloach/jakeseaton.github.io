@@ -83,7 +83,6 @@ function expand(color)
         $("#blog").removeClass("invisible-blog");
         break;
     }
-    debug();
     //remove the extra space
     $("#mobile-space").addClass("invisible");
 
