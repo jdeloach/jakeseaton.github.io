@@ -40,12 +40,13 @@ html {
   cursor: pointer; }
 
 .up-circle {
-  background-color: #616161;
+  background-color: White;
   width: 80px;
   height: 80px;
   border-radius: 40px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
   display: inline-block;
   opacity: .5;
   cursor: pointer; }
@@ -59,24 +60,7 @@ html {
   width: 100%;
   height: 100px; }
 
-/* #yellow{
-	margin-right:10px;
-	margin-left:10px;
-}*/
 .box {
   margin-left: 10px;
-  margin-right: 10px; }
-
-/* .box:hover{
-	opacity:1;
-	// this has some problem--one you click on them it doesnt work anymore
-} */
-/* #red:hover{
-	opacity:1;
-}
-#yellow:hover{
-	opacity:1;
-}
-#blue:hover{
-	opacity:1;
-} */
+  margin-right: 10px;
+  opacity: .5; }

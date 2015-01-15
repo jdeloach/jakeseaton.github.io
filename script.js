@@ -3,6 +3,32 @@ var currently_open = "";
 var opened = false;
 
 $(document).ready(function(){
+    $(".up-circle").hover(
+      function(){
+          console.log(opened);
+          $(".up-circle").fadeTo("fast","1");
+      },
+      function(){
+        console.log(opened);
+        $(".up-circle").fadeTo("fast",".5");
+      }
+    );
+
+    // hover over a circle
+    $(".box").hover(
+      function(){
+        if (opened==false){
+          console.log("derp");
+          $(this).fadeTo("fast","1");
+        }
+      },
+      function(){
+        if(opened == false){
+          console.log("derp");
+          $(this).fadeTo("fast",".5");}
+      }
+    );
+
     // click on a circle  
     $(".box").click(function(){
 
@@ -23,6 +49,9 @@ $(document).ready(function(){
           // expand to the bottom
           expand(this);
 
+          //remove the extra space
+          $("#mobile space").addClass("invisible");
+
           // reveal the content
           reveal(this.id);
 
@@ -31,14 +60,9 @@ $(document).ready(function(){
 
           // it's open
           // $(this).addClass("open");
-          
           currently_open = this.id;
-
-
         }
-      
       }
-      
     });
 
 
@@ -46,32 +70,21 @@ $(document).ready(function(){
   $(".up-circle").click(function(){
     if (opened == true){
       restore();
+
+      // add back the extra space
+      $("#mobile space").removeClass("invisible");
+
+      // close
       opened = false;
       currently_open = "";
-      // opened = false;
     }
     
-  });
-
-  $("circle").hover(function(){
-    if ($(this).css("opacity")==1){
-      $(this).fadeTo("slow",.5);
-      }
-    }
-  );
-  $("circle").mouseleave(function(){
-    if($(this).css("opacity")==.5){
-      $(this).fadeTo("slow",1);
-    }
-  });
-  
+  });  
 
 });
 
 function restore()
 {
-
-
   switch(currently_open){
     case "red":
       $("#about").addClass("invisible");
@@ -84,9 +97,10 @@ function restore()
       break;
   }
 
+  // configure
   var current = "#" + currently_open;  
 
-// reduce the height
+  // reduce the height
   $(current).animate({
     height:"0px"
    }, 200,function(){
@@ -96,8 +110,8 @@ function restore()
           $(current).css({
             'height':"80px",
             'width' :"80px",
-            "border-radius":"40px",
-            "opacity":".5"
+            "border-radius":"40px"//,
+            //"opacity":".5"
 
           });
 
@@ -109,6 +123,15 @@ function restore()
 
           // identify it as a box again
           $(current).addClass("box");
+
+          // restore hover property
+          // $(current).hover(function(){
+          //   $(this).fadeTo("fast",".5");
+          //   },
+          //   function(){
+          //     $(this).fadeTo("fast","1");
+          //   }
+          // );
 
           $(".box").removeClass("invisible");
 
