@@ -8,35 +8,48 @@ $blue:#42A5F5;
 
 // Variables
 $bg:$white;
+$title-color:$grey;
 $content-text:$white;
 $circle-radius:80px;
 $padding:10px;
 $full-screen:100%;
 $name-size:800%;
 $shadow:2px 2px 4px #000000;
+$arrow:20px;
 
 // Meta
 body{
 	background-color:$bg;
 }
-/* html{
+html{
 	overflow:hidden;
-}*/
+}
 
+// colors 
+.red{
+	background-color:$red;
+}
+.yellow{
+	background-color:$yellow;
+}
+.blue{
+	background-color:$blue;
+}
+
+// title
 #title-text{
-	// make this mobile responsive
 	font-family:"Impact",Impact, monospace;
 	margin-top:50px;
 	text-shadow: $shadow;
 	font-size:$name-size;
-	color:$grey;
+	color:$title-color;
 }
 #top-text{
-	color:$grey;
+	color:$title-color;
 	text-shadow:$shadow;
 }
 
-// use to make things feel like they're in middle school again
+// invisibility 
 .invisible {
 	display:none;
 }
@@ -50,13 +63,13 @@ body{
 	display:none;
 }
 
-// the div containing the circles
+// circle container
 #circles{
 	margin-left:auto;
 	margin-right:auto;
 }
-// Circles...they started as boxes just live with it
-.box{
+// circles
+.circ{
 	width:$circle-radius;
 	height:$circle-radius;
 	border-radius:40px;
@@ -67,21 +80,6 @@ body{
 	opacity:1;
 }
 
-.red{
-	background-color:$red;
-}
-.yellow{
-	background-color:$yellow;
-}
-.blue{
-	background-color:$blue;
-}
-
-// probably unnecessary
-/* .content{
-	display:normal;
-} */
-
 // Initial dimensions of the partition
 .partition{
 	width:$full-screen;
@@ -89,7 +87,7 @@ body{
 }
 
 // The circle to return to the original screen
-.up-circle{
+/* .up-circle{
 	background-color:White;
 	width:$circle-radius;
 	height:$circle-radius;
@@ -100,37 +98,44 @@ body{
 	display:inline-block;
 	opacity:.5;
 	cursor:pointer;
+}*/ 
+.arrow-up{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:$arrow;
+	display:inline-block;
+	opacity:.5;
+	cursor:pointer;
+	width: 0; 
+	height: 0; 
+	border-left: $arrow solid transparent;
+	border-right: $arrow solid transparent;
+	border-bottom: $arrow solid $bg;
 }
-// Specify the background colors for each of the sections
+
+//background colors for each of the sections
 #abt{
 	width:$full-screen;
 	height:$full-screen;
-	// isplay:inline-block;
 	background-color:$red;
 }
 
 #media{
 	width:$full-screen;
 	height:$full-screen;
-	// display:inline-block;
 	background-color:$yellow;
 }
 #blog{
 	width:$full-screen;
 	height:$full-screen;
-	// display:inline-block;
 	background-color:$blue;
 }
 
 #about-text, #blog-text, #media-text{
 	color:$content-text;
+	margin-top:10px;
 }
 
-/* .open{
-	width:$full-screen;
-	height:0px;
-	opacity:1;
-} */ 
 #mobile-space{
 	width: $full-screen;
 	height:100px;

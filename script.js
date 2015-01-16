@@ -4,12 +4,12 @@ var currently_open = "";
 var current = "#"+currently_open;
 
 $(document).ready(function(){
+    
     // circle:hover
-    $(".box").hover(
+    $(".circ").hover(
       function(){
         if (opened==false){
           fade(this);
-          //$(this).fadeTo("fast","1");
         }
       },
       function(){
@@ -18,31 +18,30 @@ $(document).ready(function(){
     );
 
     // circle :click 
-    $(".box").click(function(){
+    $(".circ").click(function(){
 
-      if ($(this).hasClass("box")){ 
+      if ($(this).hasClass("circ")){ 
         if (opened == false) {
           expand(this);
         }
         else{
-            restore();   
+            restore(); 
         }
       }
     });
 
-    // up-circle:hover
-    $(".up-circle").hover(
+    // arrow-up:hover
+    $(".arrow-up").hover(
       function(){
-          sharpen(".up-circle");
+          sharpen(".arrow-up");
       },
       function(){
-        fade(".up-circle");
+        fade(".arrow-up");
       }
     );
 
-
-  // up-circle:click--restore
-  $(".up-circle").click(function(){
+  // arrow-up:click--restore
+  $(".arrow-up").click(function(){
     if (opened == true){
       restore();
     }
@@ -50,10 +49,10 @@ $(document).ready(function(){
   });
 
 });
+
 /* FUNCTIONS */ 
 
 // functions for displaying content
-
 function lower_partition(){
       $("#partition").animate({
         height:"+=500px"
@@ -111,8 +110,8 @@ function raise_partition(){
 
 function restore(){
 
-  // bring back the boxes
-  sharpen(".box");
+  // bring back the circles
+  sharpen(".circ");
   
   // driver roll up the partition please
   raise_partition();

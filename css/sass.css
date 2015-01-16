@@ -1,9 +1,18 @@
 body {
   background-color: White; }
 
-/* html{
-	overflow:hidden;
-}*/
+html {
+  overflow: hidden; }
+
+.red {
+  background-color: #EF5350; }
+
+.yellow {
+  background-color: #FFEE58; }
+
+.blue {
+  background-color: #42A5F5; }
+
 #title-text {
   font-family: "Impact",Impact, monospace;
   margin-top: 50px;
@@ -31,7 +40,7 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
-.box {
+.circ {
   width: 80px;
   height: 80px;
   border-radius: 40px;
@@ -41,33 +50,34 @@ body {
   display: inline-block;
   opacity: 1; }
 
-.red {
-  background-color: #EF5350; }
-
-.yellow {
-  background-color: #FFEE58; }
-
-.blue {
-  background-color: #42A5F5; }
-
-/* .content{
-	display:normal;
-} */
 .partition {
   width: 100%;
   height: 0px; }
 
-.up-circle {
-  background-color: White;
-  width: 80px;
-  height: 80px;
-  border-radius: 40px;
+/* .up-circle{
+	background-color:White;
+	width:$circle-radius;
+	height:$circle-radius;
+	border-radius:40px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:$padding;
+	display:inline-block;
+	opacity:.5;
+	cursor:pointer;
+}*/
+.arrow-up {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  margin-top: 20px;
   display: inline-block;
   opacity: .5;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid White; }
 
 #abt {
   width: 100%;
@@ -85,13 +95,9 @@ body {
   background-color: #42A5F5; }
 
 #about-text, #blog-text, #media-text {
-  color: White; }
+  color: White;
+  margin-top: 10px; }
 
-/* .open{
-	width:$full-screen;
-	height:0px;
-	opacity:1;
-} */
 #mobile-space {
   width: 100%;
   height: 100px; }
