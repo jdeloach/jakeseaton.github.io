@@ -1,3 +1,4 @@
+@import url("http://fonts.googleapis.com/css?family=Josefin+Sans");
 body {
   background-color: White; }
 
@@ -14,14 +15,14 @@ html {
   background-color: #42A5F5; }
 
 #title-text {
-  font-family: "Impact",Impact, monospace;
-  margin-top: 50px;
-  text-shadow: 2px 2px 4px #000000;
+  font-family: "Josefin Sans", cursive;
+  margin-top: 100px;
   font-size: 800%;
   color: #616161; }
 
 #top-text {
-  color: #616161; }
+  color: #616161;
+  font-family: "Josefin Sans", cursive; }
 
 .invisible {
   display: none; }
@@ -95,7 +96,8 @@ html {
 
 #about-text, #blog-text, #media-text {
   color: White;
-  margin-top: 10px; }
+  margin-top: 10px;
+  font-family: "Josefin Sans", cursive; }
 
 #mobile-space {
   width: 100%;

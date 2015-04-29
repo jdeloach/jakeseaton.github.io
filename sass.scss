@@ -1,3 +1,5 @@
+// Fonts
+@import url("http://fonts.googleapis.com/css?family=Josefin+Sans");
 
 // Colors
 $white:White;
@@ -5,6 +7,7 @@ $grey: #616161;
 $red:#EF5350;
 $yellow:#FFEE58;
 $blue:#42A5F5;
+
 
 // Variables
 $bg:$white;
@@ -16,6 +19,7 @@ $full-screen:100%;
 $name-size:800%;
 $shadow:2px 2px 4px #000000;
 $arrow:20px;
+$margin_top:100px;
 
 // Meta
 body{
@@ -25,7 +29,7 @@ html{
 	overflow:hidden;
 }
 
-// colors 
+// colors
 .red{
 	background-color:$red;
 }
@@ -38,18 +42,20 @@ html{
 
 // title
 #title-text{
-	font-family:"Impact",Impact, monospace;
-	margin-top:50px;
-	text-shadow: $shadow;
+	font-family:"Josefin Sans", cursive;
+	margin-top:$margin_top;
+	//text-shadow: $shadow;
 	font-size:$name-size;
 	color:$title-color;
 }
 #top-text{
 	color:$title-color;
 	// text-shadow:$shadow;
+	font-family:"Josefin Sans", cursive;
+
 }
 
-// invisibility 
+// invisibility
 .invisible {
 	display:none;
 }
@@ -98,7 +104,7 @@ html{
 	display:inline-block;
 	opacity:.5;
 	cursor:pointer;
-}*/ 
+}*/
 .arrow-up{
 	margin-left:auto;
 	margin-right:auto;
@@ -106,8 +112,8 @@ html{
 	display:inline-block;
 	opacity:.5;
 	cursor:pointer;
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border-left: $arrow solid transparent;
 	border-right: $arrow solid transparent;
 	border-bottom: $arrow solid $bg;
@@ -134,6 +140,8 @@ html{
 #about-text, #blog-text, #media-text{
 	color:$content-text;
 	margin-top:10px;
+	font-family:"Josefin Sans", cursive;
+
 }
 
 #mobile-space{
