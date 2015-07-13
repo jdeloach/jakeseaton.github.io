@@ -4,7 +4,140 @@ var currently_open = "";
 var current = "#"+currently_open;
 
 $(document).ready(function(){
+  var menuItemNum=$(".menu-item").length;
+  var angle=120;
+  var distance=90;
+  var startingAngle=180+(-angle/2);
+  var slice=angle/(menuItemNum-1);
+  
+  TweenMax.globalTimeScale(0.8);
+  $(".menu-item").each(function(i){
+    var angle=startingAngle+(slice*i);
+    $(this).css({
+      transform:"rotate("+(angle)+"deg)"
+    })
+    $(this).find(".menu-item-icon").css({
+      transform:"rotate("+(-angle)+"deg)"
+    })
+  })
+  var on=false;
+
+  $(".menu-toggle-button").mousedown(function(){
+    TweenMax.to($(".menu-toggle-icon"),0.1,{
+      scale:0.65
+    })
+  })
+  $(document).mouseup(function(){
+    TweenMax.to($(".menu-toggle-icon"),0.1,{
+      scale:1
+    })
+  });
+  $(document).on("touchend",function(){
+    $(document).trigger("mouseup")
+  })
+  $(".menu-toggle-button").on("mousedown",pressHandler);
+  $(".menu-toggle-button").on("touchstart",function(event){
+    $(this).trigger("mousedown");
+    event.preventDefault();
+    event.stopPropagation();
+  });
+
+  function pressHandler(event){
+    on=!on;
+
+    TweenMax.to($(this).children('.menu-toggle-icon'),0.4,{
+      rotation:on?45:0,
+      ease:Quint.easeInOut,
+      force3D:true
+    });
+
+    on?openMenu():closeMenu();
     
+  }
+  function openMenu(){
+    $(".menu-item").each(function(i){
+      var delay=i*0.08;
+
+      var $bounce=$(this).children(".menu-item-bounce");
+
+      TweenMax.fromTo($bounce,0.2,{
+        transformOrigin:"50% 50%"
+      },{
+        delay:delay,
+        scaleX:0.8,
+        scaleY:1.2,
+        force3D:true,
+        ease:Quad.easeInOut,
+        onComplete:function(){
+          TweenMax.to($bounce,0.15,{
+            // scaleX:1.2,
+            scaleY:0.7,
+            force3D:true,
+            ease:Quad.easeInOut,
+            onComplete:function(){
+              TweenMax.to($bounce,3,{
+                // scaleX:1,
+                scaleY:0.8,
+                force3D:true,
+                ease:Elastic.easeOut,
+                easeParams:[1.1,0.12]
+              })
+            }
+          })
+        }
+      });
+
+      TweenMax.to($(this).children(".menu-item-button"),0.5,{
+        delay:delay,
+        y:distance,
+        force3D:true,
+        ease:Quint.easeInOut
+      });
+    })
+  }
+  function closeMenu(){
+    $(".menu-item").each(function(i){
+      var delay=i*0.08;
+
+      var $bounce=$(this).children(".menu-item-bounce");
+
+      TweenMax.fromTo($bounce,0.2,{
+        transformOrigin:"50% 50%"
+      },{
+        delay:delay,
+        scaleX:1,
+        scaleY:0.8,
+        force3D:true,
+        ease:Quad.easeInOut,
+        onComplete:function(){
+          TweenMax.to($bounce,0.15,{
+            // scaleX:1.2,
+            scaleY:1.2,
+            force3D:true,
+            ease:Quad.easeInOut,
+            onComplete:function(){
+              TweenMax.to($bounce,3,{
+                // scaleX:1,
+                scaleY:1,
+                force3D:true,
+                ease:Elastic.easeOut,
+                easeParams:[1.1,0.12]
+              })
+            }
+          })
+        }
+      });
+      
+
+      TweenMax.to($(this).children(".menu-item-button"),0.3,{
+        delay:delay,
+        y:0,
+        force3D:true,
+        ease:Quint.easeIn
+      });
+    })
+  }
+
     // circle:hover
     $(".circ").hover(
       function(){
@@ -17,15 +150,15 @@ $(document).ready(function(){
       }
     );
 
-    // circle :click 
+    // circle :click
     $(".circ").click(function(){
 
-      if ($(this).hasClass("circ")){ 
+      if ($(this).hasClass("circ")){
         if (opened == false) {
           expand(this);
         }
         else{
-            restore(); 
+            restore();
         }
       }
     });
@@ -45,12 +178,12 @@ $(document).ready(function(){
     if (opened == true){
       restore();
     }
-    
+
   });
 
 });
 
-/* FUNCTIONS */ 
+/* FUNCTIONS */
 
 // functions for displaying content
 function lower_partition(){
@@ -60,13 +193,13 @@ function lower_partition(){
 }
 
 function expand(color)
-{   
+{
     // fade this circle
     fade(color);
 
     // lower the partition
     lower_partition();
-    
+
     $("#partition").removeClass("invisible");
 
     switch(color.id){
@@ -85,7 +218,7 @@ function expand(color)
 
     // set opened
     opened = true;
-          
+
     currently_open = color.id;
 }
 
@@ -97,7 +230,7 @@ function raise_partition(){
   $("#partition").animate({
     "height":"-=500px"
   },200, function(){
-    
+
     // get rid of the temporary color
     $("#partition").removeClass(currently_open);
 
@@ -105,17 +238,17 @@ function raise_partition(){
     currently_open = "";
 
   });
-  
+
 }
 
 function restore(){
 
   // bring back the circles
   sharpen(".circ");
-  
+
   // driver roll up the partition please
   raise_partition();
- 
+
   switch(currently_open){
     case "red":
       $("#abt").addClass("invisible-abt");
@@ -136,10 +269,12 @@ function restore(){
 
 // other
 function fade(element){
-  $(element).fadeTo("fast",.5);
+  // $(element).fadeTo("fast",.5);
+  $(element).addClass("shadow")//animate({"box-shadow":""})
 }
 function sharpen(element){
-  $(element).fadeTo("fast",1);
+  $(element).removeClass("shadow")
+  // $(element).fadeTo("fast",1);
 }
 function fade_out(element){
   $(element).fadeTo("fast",0)

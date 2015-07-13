@@ -84,8 +84,31 @@ html{
 	margin-right:$padding;
 	display:inline-block;
 	opacity:1;
+	-webkit-transition: all .5s linear;
+	-o-transition: all .5s linear;
+	-moz-transition: all .5s linear;
+	-ms-transition: all .5s linear;
+	// -kthtml-transition: all 1s linear;
+	transition: all .5s linear;
 }
 
+.shadow {
+	-webkit-box-shadow: 0px 0px 2px 2px $grey;
+	-moz-box-shadow: 0px 0px 2px 2px $grey;
+	box-shadow: 0px 0px 2px 2px $grey;
+	-webkit-transition: all .5s linear;
+	-o-transition: all .5s linear;
+	-moz-transition: all .5s linear;
+	-ms-transition: all .5s linear;
+	// -kthtml-transition: all 1s linear;
+	transition: all .5s linear;
+	// -webkit-transition: all 1s linear;
+	// -o-transition: all 1s linear;
+	// -moz-transition: all 1s linear;
+	// -ms-transition: all 1s linear;
+	// // -kthtml-transition: all 1s linear;
+	// transition: all 1s linear;
+}
 // Initial dimensions of the partition
 .partition{
 	width:$full-screen;

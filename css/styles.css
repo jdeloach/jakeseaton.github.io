@@ -1,0 +1,116 @@
+@import url("http://fonts.googleapis.com/css?family=Josefin+Sans");
+body {
+  background-color: #fff;
+}
+html {
+  overflow: hidden;
+}
+.red {
+  background-color: #ef5350;
+}
+.yellow {
+  background-color: #ffee58;
+}
+.blue {
+  background-color: #42a5f5;
+}
+#title-text {
+  font-family: "Josefin Sans", cursive;
+  margin-top: 100px;
+  font-size: 800%;
+  color: #616161;
+}
+#top-text {
+  color: #616161;
+  font-family: "Josefin Sans", cursive;
+  font-size: 15px;
+}
+.invisible {
+  display: none;
+}
+.invisible-abt {
+  display: none;
+}
+.invisible-media {
+  display: none;
+}
+.invisible-blog {
+  display: none;
+}
+#circles {
+  margin-left: auto;
+  margin-right: auto;
+}
+.circ {
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  opacity: 1;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+.shadow {
+  -webkit-box-shadow: 0px 0px 2px 2px #616161;
+  -moz-box-shadow: 0px 0px 2px 2px #616161;
+  box-shadow: 0px 0px 2px 2px #616161;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+.partition {
+  width: 100%;
+  height: 0px;
+}
+.arrow-up {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  display: inline-block;
+  opacity: 0.5;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+}
+border-right arrow solid transparent {
+  border-bottom: 20px solid #fff;
+}
+#abt {
+  width: 100%;
+  height: 100%;
+  background-color: #ef5350;
+}
+#media {
+  width: 100%;
+  height: 100%;
+  background-color: #ffee58;
+}
+#blog {
+  width: 100%;
+  height: 100%;
+  background-color: #42a5f5;
+}
+#about-text,
+#blog-text,
+#media-text {
+  color: #fff;
+  margin-top: 10px;
+  font-family: "Josefin Sans", cursive;
+  font-size: 15px;
+}
+#mobile-space {
+  width: 100%;
+  height: 100px;
+}
+#nonsequitur:link {
+  color: #fff;
+}
+#nonsequitur:visited {
+  color: #fff;
+}

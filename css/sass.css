@@ -48,7 +48,22 @@ html {
   margin-left: 10px;
   margin-right: 10px;
   display: inline-block;
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  transition: all .5s linear; }
+
+.shadow {
+  -webkit-box-shadow: 0px 0px 2px 2px #616161;
+  -moz-box-shadow: 0px 0px 2px 2px #616161;
+  box-shadow: 0px 0px 2px 2px #616161;
+  -webkit-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  transition: all .5s linear; }
 
 .partition {
   width: 100%;
