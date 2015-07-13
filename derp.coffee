@@ -37,7 +37,7 @@ class API
 $(document).ready -> 
   api = new API
   $(".circ").mouseenter -> api.open this unless api.is_open(this)
-  $(".circ").click -> api.restore()
+  $(".circ").click -> if api.is_open this then api.restore() else api.open this
   $("body").click -> console.log "Hello "
    # $(".fa-caret-up").click -> api.restore()
   # $("a").mouseenter -> 
