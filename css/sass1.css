@@ -1,0 +1,171 @@
+@import url("http://fonts.googleapis.com/css?family=Josefin+Sans");
+#derp {
+  height: 338px;
+}
+body {
+  background-color: #fff;
+}
+html {
+  overflow: hidden;
+}
+.red {
+  background-color: #f44336;
+}
+.yellow {
+  background-color: #3f51b5;
+}
+.blue {
+  background-color: #ffeb3b;
+}
+#title-text {
+  font-family: "Josefin Sans", cursive;
+  margin-top: 100px;
+  font-size: 800%;
+  color: #616161;
+}
+#top-text {
+  color: #616161;
+  font-family: "Josefin Sans", cursive;
+  font-size: 15px;
+  height: 40px;
+  margin-top: -2px;
+}
+#circles {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4px;
+}
+.circ {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.circ:hover {
+  border-radius: 10px;
+}
+.shadow,
+.sharp {
+  opacity: 1 !important;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#abt {
+  width: 100%;
+  height: 100%;
+  background-color: #f44336;
+  padding-top: 40px;
+}
+#media {
+  width: 100%;
+  height: 100%;
+  background-color: #3f51b5;
+  padding-top: 40px;
+}
+#blog {
+  width: 100%;
+  height: 100%;
+  background-color: #ffeb3b;
+  padding-top: 40px;
+}
+#about-text {
+  color: #fff;
+  font-family: "Josefin Sans", cursive;
+  font-size: 15px;
+}
+#mobile-space {
+  width: 100%;
+  height: 100px;
+}
+#partition {
+  overflow: hidden;
+  width: 100%;
+  height: 0px;
+  background-color: #616161;
+}
+.part {
+  height: calc(100% - 338px);
+}
+.inactive {
+  display: none;
+}
+a {
+  width: 42px;
+  height: 42px;
+  display: inline-block;
+  border-radius: 80px;
+  margin-bottom: 30px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 1px;
+  border: 1px solid transparent;
+}
+a i {
+  font-size: 38px !important;
+  margin-top: 2px;
+  color: #fff;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+a img {
+  width: 42px;
+  height: 42px;
+  display: inline-block;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  margin-left: -2px;
+  border-radius: 42px;
+}
+a:hover {
+  background-color: #fff;
+}
+a:hover i {
+  color: #3f51b5;
+}
+.fa-caret-up {
+  font-size: 74px;
+  cursor: pointer;
+  color: #fff;
+  margin-top: -10px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.fa-caret-up:hover {
+  font-size: 69px;
+}
+.circ i {
+  font-size: 30px;
+  margin-top: 25px;
+  color: #fff;
+}
+.fa-twitter {
+  margin-top: 1px;
+}
+.fa-linkedin {
+  font-size: 33px !important;
+}
+a#github img {
+  padding: 1px;
+}
